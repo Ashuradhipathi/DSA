@@ -103,7 +103,6 @@ int main() {
 
     return 0;
 }
-    
-                                
+**lcm = (A*B)/gcd;**                 
                             ```
 
