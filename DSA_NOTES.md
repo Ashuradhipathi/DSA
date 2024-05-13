@@ -354,3 +354,13 @@ bool palindrome(int i, string& s){
     return palindrome(i+1,s);
 }
 ```
+```
+class Solution {
+public:
+    int fib(int n) {
+        if(n<=1) return n;//possibility of 0 so n<=1
+        return fib(n-1) + fib(n-2);
+        
+    }
+};
+```
