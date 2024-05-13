@@ -255,3 +255,52 @@ class Solution {
     }
 };
 ```
+```
+class Solution
+{
+public:
+vector<long long> v;
+
+    vector<long long> factorialNumbers(long long N)
+    {
+        // Write Your Code here
+        for(long long i=1;i<=N;i++){
+            long long fact = factorial(i);
+           if(fact <=N){
+               v.push_back(fact);
+           }
+           else{
+               return v;
+           }
+        }
+    }
+    long long factorial(long long N){
+        if(N==1) return 1;
+        return N * factorial(N-1);
+    }
+};
+```
+```
+The above led to segmentation error
+class Solution
+{
+public:
+vector<long long> v;
+long long fact =1;
+
+    vector<long long> factorialNumbers(long long N)
+    {
+        // Write Your Code here
+        for(long long i=1;i<=N;i++){
+            fact *= i;
+            v.push_back(fact); //if(fact <= N){v.push_back(fact)}
+            if(v[i-1] > N){//else{return v; break;} //also led to segmentation fault
+                v.pop_back();
+                break;
+            }
+           }
+            return v;
+    }
+
+};
+```
