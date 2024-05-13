@@ -104,5 +104,7 @@ int main() {
     return 0;
 }
 **lcm = (A*B)/gcd;**                 
-                            ```
-```int k = to_string(num).length()```
+```
+```int k = to_string(num).length()
+sum += pow(ld, k);
+ return sum == num ? true : false;```
