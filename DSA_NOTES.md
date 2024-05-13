@@ -105,4 +105,4 @@ int main() {
 }
 **lcm = (A*B)/gcd;**                 
                             ```
-
+```int k = to_string(num).length()```
