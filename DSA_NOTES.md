@@ -4,3 +4,5 @@ If reversing x causes the value to `go outside the signed 32-bit integer range [
 - INT_MAX, INT_MIN for limits.
 
 `when dealing with negative numbers` dont use x>0 as condition in while loop instead `use x!=0` 
+
+when checking with original number make  a copy.
