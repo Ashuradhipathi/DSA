@@ -219,3 +219,39 @@ int main() {
 }
                                 
 ```
+```
+    public:
+    int c=1;
+    //Complete this function
+    void printNos(int N)
+    {
+        cout << c << " ";
+        if(N==1) return;
+        //cout << N <<" ";
+        c++;
+        printNos(N-1);
+        //Your code here
+    }
+};
+```
+
+Whenever recursion calls are executed, they’re simultaneously stored in a recursion stack where they wait for the completion of the recursive function. A recursive function can only be completed if a base condition is fulfilled and the control returns to the parent function. 
+
+But, when there is no base condition given for a particular recursive function, it gets called indefinitely which results in a Stack Overflow i.e, exceeding the memory limit of the recursion stack and hence the program terminates giving a Segmentation Fault error. 
+
+```
+class Solution {
+  public:
+  long long sum;
+    long long sumOfSeries(long long n) {
+        // code here
+        //a = n*(n+1)/2;
+        //return a*a;
+        if(n==1){
+            return 1;
+        }
+        return n*n*n + sumOfSeries(n-1);
+        //do not use mathematical functions like pow, increasestiem complexity and do not forget recursion stack;
+    }
+};
+```
