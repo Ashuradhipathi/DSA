@@ -364,3 +364,5 @@ public:
     }
 };
 ```
+When given ele should be greater than N, enforce that condition
+
