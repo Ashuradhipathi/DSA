@@ -107,7 +107,8 @@ int main() {
 ```
 ```int k = to_string(num).length()
 sum += pow(ld, k);
- return sum == num ? true : false;```
+ return sum == num ? true : false;
+```
 ---
 ```
 my appproach 
