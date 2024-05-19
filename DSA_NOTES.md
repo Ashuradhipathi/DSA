@@ -424,4 +424,6 @@ int main()
 }
 ```
 
+# Two pointer
+Used when minimization of two loops to one; two variables in two loops; one loop constant other changed and then the itial one changed depedning ona  conditon
 
