@@ -373,7 +373,7 @@ This line performs the modulo operation (%) on k. The modulo operation gives the
 This step ensures k stays within the valid range for rotating the array.
 Imagine nums has 5 elements (n = 5) and you want to rotate by 8 (k = 8). Rotating by 8 is the same as rotating by 3 (8 positions to the right is the same as 5 positions to the right and then wrapping around).
 By performing k % n, you get k = 3, which is a valid rotation distance within the array size.
-
+```
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
@@ -385,4 +385,43 @@ public:
         reverse(nums.begin()+k,nums.end());
     }
 };
+
+#include <iostream>
+using namespace std;
+void Rotatetoright(int arr[], int n, int k)
+{
+  if (n == 0)
+    return;
+  k = k % n;
+  if (k > n)
+    return;
+  int temp[k];
+  for (int i = n - k; i < n; i++)
+  {
+    temp[i - n + k] = arr[i];
+  }
+  for (int i = n - k - 1; i >= 0; i--)
+  {
+    arr[i + k] = arr[i];
+  }
+  for (int i = 0; i < k; i++)
+  {
+    arr[i] = temp[i];
+  }
+}
+int main()
+{
+  int n = 7;
+  int arr[] = {1, 2, 3, 4, 5, 6, 7};
+  int k = 2;
+  Rotatetoright(arr, n, k);
+  cout << "After Rotating the elements to right " << endl;
+  for (int i = 0; i < n; i++)
+  {
+    cout << arr[i] << " ";
+  }
+  return 0;
+}
+```
+
 
