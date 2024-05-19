@@ -105,7 +105,8 @@ int main() {
 }
 **lcm = (A*B)/gcd;**                 
 ```
-```int k = to_string(num).length()
+```
+int k = to_string(num).length()
 sum += pow(ld, k);
  return sum == num ? true : false;
 ```
@@ -152,8 +153,10 @@ int main()
     }
     return 0;
 }
-// } Driver Code Ends```
-```actual case:
+// } Driver Code Ends
+```
+```
+actual case:
 sum = sum+(i*(N/i));
 ```
 
