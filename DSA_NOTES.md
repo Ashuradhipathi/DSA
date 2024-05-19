@@ -366,3 +366,23 @@ public:
 ```
 When given ele should be greater than N, enforce that condition
 
+
+2. k = k % n;
+
+This line performs the modulo operation (%) on k. The modulo operation gives the remainder when k is divided by n.
+This step ensures k stays within the valid range for rotating the array.
+Imagine nums has 5 elements (n = 5) and you want to rotate by 8 (k = 8). Rotating by 8 is the same as rotating by 3 (8 positions to the right is the same as 5 positions to the right and then wrapping around).
+By performing k % n, you get k = 3, which is a valid rotation distance within the array size.
+
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        //int j=0;
+        int n = nums.size();
+        k = k % n; 
+        reverse(nums.begin(),nums.end());
+        reverse(nums.begin(),nums.begin()+k);
+        reverse(nums.begin()+k,nums.end());
+    }
+};
+
