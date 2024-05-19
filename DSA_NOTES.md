@@ -495,3 +495,4 @@ int main() {
 }
 // } Driver Code Ends
 ```
+https://leetcode.com/problems/missing-number/ : Can use mathematical formula or bitwise operations;
